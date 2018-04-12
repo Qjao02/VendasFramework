@@ -1,0 +1,3 @@
+{"rg":"2","dataDeNascimento":"Aug 11, 1996 12:00:00 AM","nome":"teste","endereco":"rua jatoba","persistido":true}
+{"rg":"4","dataDeNascimento":"Aug 11, 1995 12:00:00 AM","nome":"romario","endereco":"teste","persistido":true}
+{"rg":"1","dataDeNascimento":"Aug 11, 1996 12:00:00 AM","nome":"jujuba","endereco":"rua jatoba","persistido":true}

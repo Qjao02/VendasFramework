@@ -1,0 +1,3 @@
+{"codigo":5,"nome":"farinha","valor":1.1,"persistido":true}
+{"codigo":2,"nome":"arroz","valor":3.2,"persistido":true}
+{"codigo":3,"nome":"esqueiro","valor":2.4,"persistido":true}
