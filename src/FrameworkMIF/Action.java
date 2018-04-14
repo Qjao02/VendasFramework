@@ -5,7 +5,10 @@ public class Action {
 	private Method method;
 	
 	
-	public Action() { }
+	public Action() { 
+		name = "Unnamed";
+		method = null;
+	}
 	
 	public Action(String name, Method method) {
 		this.name = name;

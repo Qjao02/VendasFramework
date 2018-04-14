@@ -6,5 +6,4 @@ public class MethodExit implements Method {
 	public void run() {
 		System.out.println("Saindo ...");
 	}
-
 }

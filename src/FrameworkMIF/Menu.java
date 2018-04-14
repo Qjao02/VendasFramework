@@ -2,6 +2,7 @@ package FrameworkMIF;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Menu extends Action implements Method {
@@ -28,7 +29,14 @@ public class Menu extends Action implements Method {
 		super.setName(title);
 	}
 	
-	public Menu() { } 
+	public Menu() { 
+		title = "Menu";
+		optionText = "Selecione a opção: ";
+		errorText = "Um erro ocorreu!";
+		actionList = new ArrayList<Action>();
+		actionList.add(new Action("Sair", new MethodExit()));
+		super.setMethod(this);
+	}
 	
 	public String getTitle() {
 		return title;
@@ -68,12 +76,12 @@ public class Menu extends Action implements Method {
 
 	@Override
 	public void run() {
-		int opt = 3;
+		int opt = 1;
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		while (opt > 0) {
 			System.out.println(title);
-			for (int i=0; i<actionList.size()-1; i++) {
+			for (int i=0; i<actionList.size(); i++) {
 				System.out.println(i + " - " + actionList.get(i).getName());
 			}
 			System.out.println(optionText);
@@ -82,13 +90,10 @@ public class Menu extends Action implements Method {
 				actionList.get(opt).getMethod().run();
 			} catch (IOException e) {
 				ShowError();
+			} catch (IndexOutOfBoundsException e) {
+				System.out.println("Opção inválida.");
 			}
 		}
-		
-		try {
-			actionList.get(0).getMethod().run();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		actionList.get(0).getMethod().run();
 	}
 }
