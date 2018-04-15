@@ -26,9 +26,12 @@ public class CadastrarCliente implements Method {
 		dadosEntrada.add(endereco);
 		dadosEntrada.add(rg);
 		dadosEntrada.add(data);
+<<<<<<< HEAD
 		String msg = MenuView.clienteController.create(dadosEntrada, MenuView.clientes);
 		System.out.println(msg);
 		
+=======
+>>>>>>> 246dfab4df91062b943121139b68787fd902ce5f
 		MenuView.clienteController.create(dadosEntrada, MenuView.clientes);
 	}
 	

@@ -13,12 +13,15 @@ public class ExibirCliente implements Method {
 		String rg = MenuView.in.nextLine(); 
 		try {
 			Cliente cliente = MenuView.clienteController.retrieve(rg, MenuView.clientes);
+<<<<<<< HEAD
 			if (cliente != null) {
 				System.out.println("Cliente recuperado: ");
 				System.out.println(cliente.toString());
 			} else {
 				System.out.println("Cliente não existe.");
 			}
+=======
+>>>>>>> 246dfab4df91062b943121139b68787fd902ce5f
 			System.out.println("Cliente recuperado: ");
 			System.out.println(cliente.toString());
 		} catch (IOException e) {
