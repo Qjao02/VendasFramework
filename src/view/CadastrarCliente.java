@@ -28,6 +28,8 @@ public class CadastrarCliente implements Method {
 		dadosEntrada.add(data);
 		String msg = MenuView.clienteController.create(dadosEntrada, MenuView.clientes);
 		System.out.println(msg);
+		
+		MenuView.clienteController.create(dadosEntrada, MenuView.clientes);
 	}
 	
 	

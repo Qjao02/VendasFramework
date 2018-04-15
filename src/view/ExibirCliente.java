@@ -19,6 +19,8 @@ public class ExibirCliente implements Method {
 			} else {
 				System.out.println("Cliente não existe.");
 			}
+			System.out.println("Cliente recuperado: ");
+			System.out.println(cliente.toString());
 		} catch (IOException e) {
 			System.out.println("Não foi possível recuperar o cliente.");
 		}

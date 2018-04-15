@@ -14,6 +14,7 @@ public class RemoverCliente implements Method {
 		try {
 			String msg = MenuView.clienteController.delete(rg, MenuView.clientes);
 			System.out.println(msg);
+			MenuView.clienteController.delete(rg, MenuView.clientes);
 		} catch (IOException e) {
 			System.out.println("Nao foi possivel persistir/recurperar os dados.");
 		}
