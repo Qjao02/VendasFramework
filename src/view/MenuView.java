@@ -51,7 +51,14 @@ public class MenuView {
 		Menu menuProduto = new Menu();
 		menuProduto.setTitle("Menu Produto");
 		menuProduto.setName("Alterar e visualizar Produtos");
-		
+		cadastrar = new Action("Cadastrar", new CadastrarProduto());
+		remover = new Action("Remover", new RemoverProduto());
+		modificar = new Action("Modificar", new ModificarProduto());
+		exibir = new Action("Exibir", new ExibirProduto());
+		menuProduto.getActionList().add(cadastrar);
+		menuProduto.getActionList().add(remover);
+		menuProduto.getActionList().add(modificar);
+		menuProduto.getActionList().add(exibir);
 		
 		menu.getActionList().add(menuProduto);
 		
